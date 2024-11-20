@@ -1,0 +1,29 @@
+﻿{
+  "GeneralSettings": {
+    "Vr": "false",
+    "AvatarLog": "true",
+    "JoinLog": "true",
+    "FirstTime": "false"
+  },
+  "OverlaySettings": {
+    "FontSize": "48",
+    "Position": {
+      "X": "0.82",
+      "Y": "-0.25",
+      "Z": "-0.4"
+    },
+    "TextColor": {
+      "Red": "255",
+      "Green": "255",
+      "Blue": "255",
+      "Alpha": "255"  
+    },
+    "BackgroundColor": {
+      "Red": "0",
+      "Green": "149",
+      "Blue": "235",
+      "Alpha": "200"
+
+    }
+  }
+}

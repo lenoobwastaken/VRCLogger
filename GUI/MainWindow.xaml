@@ -1,0 +1,25 @@
+﻿<Window x:Class="VRCLogger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VRCLogger"
+        mc:Ignorable="d"
+        Background="DarkCyan"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,-13,-21,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="751*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="Input"  TextWrapping="Wrap" Margin="218,114,285,286" InputScope="Default" IsReadOnlyCaretVisible="True" Grid.Column="1" TextChanged="FileIdInput_TextChanged"/>
+        <Button Content="Avatar Info" Margin="106,186,481,206" Click="Button_Click_1" Grid.Column="1"/>
+        <Button Content="Open Folder" Margin="414,187,171,207" Click="Button_Click" Grid.Column="1"/>
+        <TextBox x:Name="textbox69" Background="Transparent" BorderBrush="Transparent" Foreground="White" HorizontalAlignment="Right" Margin="0,363,25,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="779" Height="76" TextChanged="textbox69_TextChanged" Grid.ColumnSpan="2"/>
+        <Label Content="Enter FileID or AvatarID
+               " Margin="269,75,314,313" Grid.Column="1"/>
+        <Button Content="Change Avatar" HorizontalAlignment="Left" Margin="270,240,0,0" VerticalAlignment="Top" Height="30" Width="144" Click="Button_Click_2" Grid.Column="1"/>
+    </Grid>
+
+</Window>

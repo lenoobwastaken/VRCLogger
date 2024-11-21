@@ -7,3 +7,7 @@ bad code thing ya
 # Info
 - you can toggle some features and customize the overlay by editing the config.json file
 - uhhhh yeah
+# Config Info
+- X: lower number moves the notification to left and higher moves to right
+- Y: lower number moves the notification to bottom and higher moves to upper
+- Z: lower number moves the notification closer and higher moves further

@@ -127,15 +127,15 @@ namespace VRCLogger
             PlayerList = new List<string>();
             if (!File.Exists(Environment.CurrentDirectory + "\\avatarid.txt"))
             {
-
+                File.Create(Environment.CurrentDirectory + "\\avatarid.txt");
             }
             if (!File.Exists(Environment.CurrentDirectory + "\\DB.txt"))
             {
-
+                File.Create(Environment.CurrentDirectory + "\\DB.txt");
             }
             if (!File.Exists(Environment.CurrentDirectory + "\\Login.txt"))
             {
-
+                File.Create(Environment.CurrentDirectory + "\\Login.txt");
             }
             if (cfg.GeneralSettings.FirstTime == true)
             {

@@ -15,20 +15,19 @@ using VRChat.API.Model;
 using File = System.IO.File;
 using Newtonsoft.Json;
 using static VRCLogger.Confwig;
+using System;
 namespace VRCLogger
 {
     public static class Program
     {
-      
-
         public static List<string> PlayerList;
         public static List<string> logfile = new List<string>();
         public static  int NotifTime;
-       public static HmdMatrix34_t PosMatrix;
+        public static HmdMatrix34_t PosMatrix;
         public static SolidBrush TextBrush;
         public static SolidBrush BackgroundBrush;
         public static int FontSize;
-       public static Configuration config;
+        public static Configuration config;
         public static ApiClient client;
         public static bool IsGui = false;
         public static AuthenticationApi authApi;
@@ -61,6 +60,18 @@ namespace VRCLogger
                 }
             } 
             throw new FileNotFoundException("Configuration file not found."); 
+
+        }
+        private static Random random = new Random();
+        public static string randstr(int length) 
+        { 
+            const string chr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            StringBuilder result = new StringBuilder(length);
+            for (int i = 0; i < length; i++) 
+            { 
+                result.Append(chr[random.Next(chr.Length)]);
+            } 
+            return result.ToString(); 
         }
         public static Config cfg;
         public static void LoadConfig()
@@ -129,7 +140,7 @@ namespace VRCLogger
             {
                 config = new Configuration();
                 client = new ApiClient();
-                config.UserAgent = "VRCLogger/0.0.1 LogYes";
+                config.UserAgent = $"{randstr(8)}/0.0.1 {randstr(8)}";
                 if (string.IsNullOrEmpty(System.IO.File.ReadAllText(Environment.CurrentDirectory + "\\Login.txt")) == true)
                 {
                     MessageBox.Show("Please put your current vrc login in the Login.txt");
